@@ -60,9 +60,9 @@ public class GodfathersPizzaApplication {
 		beverage.add(menuBibite("Spellegrino"));
 		beverage.add(menuBibite("Fanta"));
 		List<Gadgets> Gadget = new ArrayList();
-		Gadget.add(new Gadgets("conchiglia piccola","1.50 euro"));
-		Gadget.add(new Gadgets("conchiglia grande", "10.50 euro"));
-		Gadget.add(new Gadgets("conchiglia media", "5.50 euro"));
+		Gadget.add(new Gadgets("stella","1.50 euro"));
+		Gadget.add(new Gadgets("distruttore di mondi", "10.50 euro"));
+		Gadget.add(new Gadgets("hello kitty", "5.50 euro"));
 		
 		System.out.println("MENU \n");
 		System.out.println("Pizze:\n");
