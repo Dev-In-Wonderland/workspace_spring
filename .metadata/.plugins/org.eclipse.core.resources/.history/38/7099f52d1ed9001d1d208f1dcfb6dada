@@ -1,0 +1,44 @@
+package it.eipcode.m5w1d2;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+
+import it.eipcode.m5w1d2.test.User;
+
+public class UserTest {
+	User u;
+	
+	@BeforeEach
+	public void beforeTest() {
+		 u = new User("Arminoio","Delloccio","nm@mn.it","qwerty" );
+		 System.out.println("beforeTest");
+	}
+	
+	
+	@Test
+	public void testPassword()
+	{
+		User u = new User("Arminoio","Delloccio","nm@mn.it","qwerty" );
+		assertEquals("qwerty", u.getPassword());
+	}
+
+	
+	
+	@Test
+	public void testMail()
+	{
+		User u = new User("Arminoio","Delloccio","nm@mn.it","qwerty" );
+		assertEquals("nm@mn.it", u.getEmail());
+	}
+
+	
+	@AfterEach
+	public void afterTest() {
+		 u = null;
+		 System.out.println("afterTest");
+	}
+
+}

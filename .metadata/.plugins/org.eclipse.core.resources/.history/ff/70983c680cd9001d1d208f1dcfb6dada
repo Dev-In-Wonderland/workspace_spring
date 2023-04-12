@@ -1,0 +1,10 @@
+package test_junit;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class TestJUnit implements CommandLineRunner{
+	
+
+}

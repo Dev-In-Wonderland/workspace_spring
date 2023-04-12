@@ -1,0 +1,32 @@
+package it.eipcode.m5w1d2.configuration;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+@Configuration
+public class UserConfiguration {
+
+	@Value("${user.admin.name}")
+	
+	@Bean
+	@Scope("prototype")
+	public User customUser() {
+		return new User();
+	} 
+	
+	
+	@Bean
+	@Scope("prototype")
+	public User customUser(String name, String lastname, String email, String password) {
+		return new User(name, lastname, email, password);
+	} 
+	
+	@Bean
+	@Scope("prototype")
+	public User adminUser() {
+		return new User();
+	} 
+	
+}

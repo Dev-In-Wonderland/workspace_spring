@@ -1,0 +1,10 @@
+package it.eipcode.m5w1d2.test_junit;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class TestRunner implements CommandLineRunner{
+	
+
+}

@@ -1,0 +1,5 @@
+package it.eipcode.m5w1d2.configuration;
+
+public class UserConfiguration {
+
+}

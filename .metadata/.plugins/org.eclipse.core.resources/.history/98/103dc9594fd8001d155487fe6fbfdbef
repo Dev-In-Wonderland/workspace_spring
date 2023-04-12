@@ -1,0 +1,26 @@
+package com.spring_configure.configuration;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ConfigurationTest {
+
+	
+	@Bean
+	public Test test() {
+		return new Test("Mario Test!!!");
+	}
+	
+	@Bean
+	public Test paramtest(String name) {
+		return new Test(name);
+	}
+	
+	@Bean
+	public Test abc() {
+		return new Test("Mario Test!!!");
+	}
+	
+	
+}

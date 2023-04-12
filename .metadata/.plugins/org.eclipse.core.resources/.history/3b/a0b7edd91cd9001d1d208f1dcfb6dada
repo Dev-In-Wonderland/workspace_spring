@@ -1,0 +1,28 @@
+package it.eipcode.m5w1d2;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import it.eipcode.m5w1d2.test.User;
+
+public class UserTest {
+	@Test
+	public void testPassword()
+	{
+		User u = new User("Arminoio","Delloccio","nm@mn.it","qwerty" );
+		assertEquals("qwerty", u.getPassword());
+	}
+
+	
+	
+	@Test
+	public void testMail()
+	{
+		User u = new User("Arminoio","Delloccio","nm@mn.it","qwerty" );
+		assertEquals("nm@mn.it", u.getEmail());
+	}
+
+	
+	
+
+}
