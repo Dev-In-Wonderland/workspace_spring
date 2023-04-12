@@ -1,0 +1,5 @@
+package piatti;
+
+public enum Dimensione {
+
+}

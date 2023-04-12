@@ -1,43 +1,76 @@
 package it.eipcode.m5w1d1;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import it.eipcode.m5w1d1.configuration_component.Menu_Component;
+import it.eipcode.m5w1d1.configuration.ConfigurationGodfatherPizzas;
+
+import it.eipcode.m5w1d1.configuration.configurationBibite;
+
+import piatti.Bibite;
+import piatti.Gadgets;
+import piatti.GodfathersPizzas;
+import topping.CustomGodfathersPizza;
+
 
 @SpringBootApplication
 public class GodfathersPizzaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(GodfathersPizzaApplication.class, args);
-		config_component();
-	}
-public static void config_component() {
+//		menuPizza("capricciosa");
+//		menuBeverage("CocaCola");
+//		aggiungiCondimento(menuPizza("capricciosa"),"fried chips");
+		getMenu();
+	
 		
-
-		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext();
-	appContext.scan("it.eipcode.m5w1d1.configuration_component");
-	appContext.refresh();
-	Menu_Component t1 = (Menu_Component) appContext.getBean("MenuComponent");
-	t1.setPizza("Pizza Margherita, prezzo 8 euro");
-	
-	System.out.println(t1.menu());
-	
-	Menu_Component t2 = (Menu_Component) appContext.getBean("MenuComponent");
-	t2.setPizza("Pizza Napoli, prezzo 8 euro");
-	
-	System.out.println(t2.menu());
-	
-	Menu_Component t3 = (Menu_Component) appContext.getBean("MenuComponent");
-	t3.setPizza("Pizza Quattro Stagioni, prezzo 10 euro");
-	
-	System.out.println(t3.menu());
-	
-	Menu_Component t4 = (Menu_Component) appContext.getBean("MenuComponent");
-	t4.setPizza("Bibite: Fanta/Sprite/Red Bull, prezzo 3 euro");
-	
-	System.out.println(t4.menu());
-			
 	}
+	public static GodfathersPizzas menuGodfathersPizza(String cibo) {
+		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext(ConfigurationGodfatherPizzas.class);
+		GodfathersPizzas p1 = (GodfathersPizzas) appContext.getBean(cibo);
+		appContext.close();
+		return p1;
+	}
+	public static Bibite menuBibite(String cibo) {
+		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext(configurationBibite.class);
+		Bibite b1 = (Bibite) appContext.getBean(cibo);
+		appContext.close();
+		return b1;
+	}
+	public static CustomGodfathersPizza aggiungiCondimento(GodfathersPizzas name,String condimento) {
+		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext(ConfigurationGodfatherPizzas.class);
+		CustomGodfathersPizza b1 = (CustomGodfathersPizza) appContext.getBean("condimento",name,condimento);
+		appContext.close();
+		return b1;
+	}
+	
+	public static void getMenu() {
+		List<GodfathersPizzas> pizze = new ArrayList();
+		pizze.add(menuGodfathersPizza("margherita"));
+		pizze.add(menuGodfathersPizza("capricciosa"));
+		pizze.add(menuGodfathersPizza("stagioni"));
+		pizze.add(menuGodfathersPizza("frutti_di_mare"));
+		List<Bibite> beverage = new ArrayList();
+		beverage.add(menuBibite("RedBull"));
+		beverage.add(menuBibite("Spellegrino"));
+		beverage.add(menuBibite("Fanta"));
+		List<Gadgets> Gadget = new ArrayList();
+		Gadget.add(new Gadgets("stella","1.50 euro"));
+		Gadget.add(new Gadgets("distruttore di mondi", "10.50 euro"));
+		Gadget.add(new Gadgets("hello kitty", "5.50 euro"));
+		
+		System.out.println("MENU \n");
+		System.out.println("Pizze:\n");
+		pizze.forEach(e -> System.out.println(e.getCibo()));
+		System.out.println("\nBeverage:\n");
+		beverage.forEach(e -> System.out.println(e.getCibo()));
+		System.out.println("\nGadget:\n");
+		Gadget.forEach(e -> System.out.println(e.getCibo()));
+	}
+
 }
