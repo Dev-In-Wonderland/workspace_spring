@@ -1452,3 +1452,9 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact it.eipcode.m5
 2023-04-17 19:48:20,580 [Worker-38: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/6.0.7/spring-aspects-6.0.7-sources.jar
 2023-04-17 19:48:20,616 [Worker-38: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/6.0.7/spring-aspects-6.0.7-sources.jar
 2023-04-17 19:48:20,622 [Worker-38: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-aspects:6.0.7
+2023-04-17 20:12:41,022 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-17 20:12:41,046 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:12:41,051 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\tnann\OneDrive\Desktop\m5\workspace_spring\JDBC\src\test\resources
+2023-04-17 20:12:41,637 [Worker-49: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: it.eipcode.m5w1d3:JDBC:0.0.1-SNAPSHOT @ C:\Users\tnann\OneDrive\Desktop\m5\workspace_spring\JDBC\pom.xml.
+2023-04-17 20:12:41,835 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-17 20:12:41,835 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
