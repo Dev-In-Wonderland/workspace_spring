@@ -33,4 +33,9 @@
     <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeAll"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.AfterAll"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Disabled"/>
+    <fullyQualifiedTypeName name="piatti.Bibite"/>
+    <fullyQualifiedTypeName name="piatti.GodfathersPizzas"/>
+    <fullyQualifiedTypeName name="topping.CustomGodfathersPizza"/>
+    <fullyQualifiedTypeName name="it.eipcode.m5w1d1.configuration.ConfigurationPizza"/>
+    <fullyQualifiedTypeName name="it.eipcode.m5w1d1.configuration.ConfigurationGodfatherPizzas"/>
 </qualifiedTypeNameHistroy>
