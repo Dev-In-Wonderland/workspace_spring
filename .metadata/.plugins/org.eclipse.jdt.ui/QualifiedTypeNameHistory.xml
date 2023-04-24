@@ -38,4 +38,10 @@
     <fullyQualifiedTypeName name="topping.CustomGodfathersPizza"/>
     <fullyQualifiedTypeName name="it.eipcode.m5w1d1.configuration.ConfigurationPizza"/>
     <fullyQualifiedTypeName name="it.eipcode.m5w1d1.configuration.ConfigurationGodfatherPizzas"/>
+    <fullyQualifiedTypeName name="service.EdificioService"/>
+    <fullyQualifiedTypeName name="service.UtenteService"/>
+    <fullyQualifiedTypeName name="repository.PostazioneDAORepository"/>
+    <fullyQualifiedTypeName name="repository.PrenotazioneDAORepository"/>
+    <fullyQualifiedTypeName name="model.Postazione"/>
+    <fullyQualifiedTypeName name="model.Edificio"/>
 </qualifiedTypeNameHistroy>
